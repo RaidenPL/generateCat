@@ -31,5 +31,4 @@ def nameOfCat():
     
     # Return the result
     return result
-
-print(nameOfCat())
+    

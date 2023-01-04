@@ -4,6 +4,7 @@ from urllib.request import urlretrieve
 from PIL import Image
 
 def generateCat(prompt,filename):
+    print("Zaczynam generowanie zdjecia...")
     # Define the API endpoint and the headers for the request
     endpoint = "https://api.openai.com/v1/images/generations"
     headers = {
@@ -35,5 +36,11 @@ def generateCat(prompt,filename):
     image = Image.open(filename)
 
     image.save(filename, "JPEG")
+    
+    print("Zdjecie wygenerowane!")
 
-generateCat(nameOfCat.nameOfCat(),"cat.jpg")
+
+# name = nameOfCat.nameOfCat()
+# generateCat(name + "cat image","./cats/" + name + ".jpg")
+
+generateCat("galactic cat fighting in space like in starwars but its harry potter lore","delfin.jpg")
